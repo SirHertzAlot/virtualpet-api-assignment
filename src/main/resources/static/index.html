@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripts/viewRetriever.js"></script>
+</head>
+<body>
+    <h2></h2>
+    <span></span>
+    <script>
+        retrieveAllPetsData();
+        retrieveOnePetsData();
+        //Commented this out since everytime the page reloads it fires. May just make some buttons and call these on client.
+        //postOnePetsData("http://localhost:8081/addPet", { name: "jacky boy", description: "An excitable Jack Russell terrier with a huge personality!" } ).then( (data) => { console.log(data); } ); JSON data parsed by `data.json()` call
+        deleteOnePetsData();
+        retrieveDeletedPetsData();
+    </script>
+</body>
+</html>
