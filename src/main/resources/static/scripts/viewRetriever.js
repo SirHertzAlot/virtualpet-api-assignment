@@ -33,7 +33,9 @@ async function retrieveAllPetsData(){
                 list.appendChild(li);
                 ul.appendChild(list);
 
-                console.log(`Successfully retrieved all virtual pets, ${list}. Please check web page for output.`);
+                let processedPets = JSON.stringify(virtualPets);
+
+                console.log(`%cSuccessfully retrieved all virtual pets,` + processedPets + ` . Please check web page for output.`, "font-size:20px");
             });
         }).catch((error) => {
             return `Error, please refer to error message for details. ${error.message}`;
@@ -71,8 +73,10 @@ async function retrieveOnePetsData(){
             li.appendChild(description);
             list.appendChild(li);
             ul.appendChild(list);
+
+            let processedPet = JSON.stringify(virtualPet);
             
-            console.log(`Successfully retrieved virtual pet, ${list}. Please check web page for output.`);
+            console.log(`%cSuccessfully retrieved virtual pet: -> ${processedPet}. Please check web page for output.`, "font-size:20px");
         }).catch((error) => {
             return `Error, please refer to error message for details. ${error.message}`;
         });
